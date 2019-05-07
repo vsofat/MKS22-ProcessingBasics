@@ -56,8 +56,8 @@ class Visualizer {
     float rectW = 400/numtotal; 
     float rectH = x + rectW * position;
     
-   if(value > 0) fill(0,255,0); 
-   else fill(255,0,0); 
+   if(value > 0) fill((255-value/100*255),255,0); 
+   else fill(255,(128+value/100*128),0); 
   
    rect(rectH,y+100,rectW,-1*value);
   }
