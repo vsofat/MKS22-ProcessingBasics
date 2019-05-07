@@ -70,7 +70,7 @@ class Visualizer {
       //??? keep them values between max/min value so they stay in the box.
   
       //??? reverse the speeds so the bar oscillates up/down when it reaches max/min
-      if(values[i] > 100){
+      if(values[i] > 100){ 
         values[i] = 100 - (values[i] - 100);
         speeds[i] *= -1;
       }
