@@ -40,16 +40,30 @@ class Visualizer {
 
     //???WRITE THIS METHOD FIRST!!!
     //THESE ARE WRONG: They just illustrate how they could look
-    fill(255, 0, 0);
+   /* fill(255, 0, 0);
     rect(x+40, y+100, 60, 50);
     fill(0, 255, 0);
-    rect(x+120, y+50, 60, 50);
-
+    rect(x+120, y+50, 60, 50); */
+    for (int i=0; i<values.length; i++){
+      drawRects(i,values.length,values[i]);
+    }
 
     //Width of the visualizer is 400!
 
   
   }
+  
+  void drawRects(int position, int numtotal, float value){
+    float rectW = 400/numtotal; 
+    float rectH = x + rectW * position;
+    
+   if(value > 0) fill(0,255,0); 
+   else fill(255,0,0); 
+  
+   rect(rectH,y+100,rectW,-1*value);
+  }
+  
+  
   void update() {
     //???WRITE THIS METHOD SECOND!!!
     for (int i = 0; i < values.length; i++) {
